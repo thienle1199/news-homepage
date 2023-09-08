@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | News homepage</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="container px-4 mt-7 mx-auto w-full max-w-[1024px] sm:mt-10">
+    <header>
+      <nav class="flex justify-between items-center">
+        <img src="/assets/images/logo.svg" alt="" />
+
+        <button
+          type="button"
+          id="sidebar-button-open"
+          class="sm:hidden ml-auto mr-[20px]"
+        >
+          <img src="/assets/images/icon-menu.svg" alt="menu-icon" />
+        </button>
+
+        <ul class="hidden sm:flex text-gunmetal gap-10">
+          <a href="#">Home</a>
+          <a href="#">New</a>
+          <a href="#">Popular</a>
+          <a href="#">Trending</a>
+          <a href="#">Categories</a>
+        </ul>
+      </nav>
+    </header>
+    <div
+      id="sidebar-background"
+      data-state="close"
+      class="hidden data-[state=open]:block fixed sm:hidden overflow-hidden pointer-events-auto inset-0 bg-dark-space-blue/50"
+    ></div>
+    <aside
+      id="sidebar"
+      data-state="close"
+      class="hidden data-[state=open]:block w-[75%] sm:hidden bg-white fixed top-0 bottom-0 right-0"
+    >
+      <div class="flex">
+        <button
+          type="button"
+          id="sidebar-button-close"
+          class="ml-auto mr-[20px] mt-[27px]"
+        >
+          <img src="/assets/images/icon-menu-close.svg" alt="menu-icon" />
+        </button>
+      </div>
+
+      <ul class="flex gap-6 px-6 mt-[20%] text-dark-space-blue flex-col">
+        <a href="#">Home</a>
+        <a href="#">New</a>
+        <a href="#">Popular</a>
+        <a href="#">Trending</a>
+        <a href="#">Categories</a>
+      </ul>
+    </aside>
+    <main class="py-10">
+      <div class="md:grid grid-cols-[2fr_1fr] gap-7">
+        <section>
+          <img src="/assets/images/image-web-3-desktop.jpg" alt="" />
+
+          <div class="flex flex-col sm:flex-row gap-4 sm:mt-7">
+            <h1
+              class="mt-6 text-heading-l sm:text-heading-x-l font-extrabold leading-10 sm:leading-[56px]"
+            >
+              The Bright Future of Web 3.0?
+            </h1>
+            <div class="flex flex-col gap-6 sm:justify-between">
+              <p class="text-body text-gunmetal leading-[26px]">
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+
+              <button
+                class="text-[14px] font-bold tracking-widest uppercase bg-light--vermillion text-almost-white w-[185px] py-3"
+              >
+                Read more
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="bg-dark-space-blue py-6 px-5 mt-16 sm:mt-0">
+          <h2 class="text-yellow text-heading-m font-bold leading-8">New</h2>
+
+          <div class="text-almost-white gap-[30px] flex flex-col mt-8">
+            <article class="flex flex-col gap-1">
+              <h3 class="text-heading-s font-extrabold leading-6">
+                Hydrogen VS Electric Cars
+              </h3>
+              <p class="text-[15px] leading-[26px] font-normal text-silver">
+                Will hydrogen-fueled cars ever catch up to EVs?
+              </p>
+            </article>
+
+            <div class="w-full bg-divider-color h-[1px]"></div>
+
+            <article class="flex flex-col gap-1">
+              <h3 class="text-heading-s font-extrabold leading-6">
+                The Downsides of AI Artistry
+              </h3>
+              <p class="text-[15px] leading-[26px] font-normal text-silver">
+                What are the possible adverse effects of on-demand AI image
+                generation?
+              </p>
+            </article>
+
+            <div class="w-full bg-divider-color h-[1px]"></div>
+
+            <article class="flex flex-col gap-1">
+              <h3 class="text-heading-s font-extrabold leading-6">
+                Is VC Funding Drying Up?
+              </h3>
+              <p class="text-[15px] leading-[26px] font-normal text-silver">
+                Private funding by VC firms is down 50% YOY. We take a look at
+                what that means.
+              </p>
+            </article>
+          </div>
+        </section>
+      </div>
+      <section class="mt-16 flex flex-col gap-8 md:flex-row">
+        <article class="flex gap-8">
+          <img
+            class="h-[130px]"
+            src="/assets/images/image-retro-pcs.jpg"
+            alt=""
+          />
+          <div class="flex flex-col gap-3">
+            <span class="text-heading-m font-bold leading-8 text-silver"
+              >01</span
+            >
+            <h4
+              class="mt-auto text-heading-xs font-extrabold text-lg leading-6"
+            >
+              Reviving Retro PCs
+            </h4>
+            <p class="text-[15px] leading-[26px] font-normal text-gunmetal">
+              What happens when old PCs are given modern upgrades?
+            </p>
+          </div>
+        </article>
+
+        <article class="flex gap-8">
+          <img
+            class="h-[130px]"
+            src="/assets/images/image-top-laptops.jpg"
+            alt=""
+          />
+          <div class="flex flex-col gap-3">
+            <span class="text-heading-m font-bold leading-8 text-silver"
+              >02</span
+            >
+            <h4
+              class="mt-auto text-heading-xs font-extrabold text-lg leading-6"
+            >
+              Top 10 Laptops of 2022
+            </h4>
+            <p class="text-[15px] leading-[26px] font-normal text-gunmetal">
+              Our best picks for various needs and budgets.
+            </p>
+          </div>
+        </article>
+
+        <article class="flex gap-8">
+          <img
+            class="h-[130px]"
+            src="/assets/images/image-gaming-growth.jpg"
+            alt=""
+          />
+          <div class="flex flex-col gap-3">
+            <span class="mt-auto text-heading-m font-bold leading-8 text-silver"
+              >03</span
+            >
+            <h4 class="text-heading-xs font-extrabold text-lg leading-6">
+              The Growth of Gaming
+            </h4>
+            <p class="text-[15px] leading-[26px] font-normal text-gunmetal">
+              How the pandemic has sparked fresh opportunities.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
