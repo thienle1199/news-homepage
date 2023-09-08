@@ -16,7 +16,9 @@
 
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body class="container px-4 mt-7 mx-auto w-full max-w-[1024px] sm:mt-10">
+  <body
+    class="container px-4 lg:px-0 mt-7 mx-auto w-full max-w-[1110px] sm:mt-10"
+  >
     <header>
       <nav class="flex justify-between items-center">
         <img src="/assets/images/logo.svg" alt="" />
@@ -30,11 +32,11 @@
         </button>
 
         <ul class="hidden sm:flex text-gunmetal gap-10">
-          <a href="#">Home</a>
-          <a href="#">New</a>
-          <a href="#">Popular</a>
-          <a href="#">Trending</a>
-          <a href="#">Categories</a>
+          <a class="hover:text-light--vermillion" href="#">Home</a>
+          <a class="hover:text-light--vermillion" href="#">New</a>
+          <a class="hover:text-light--vermillion" href="#">Popular</a>
+          <a class="hover:text-light--vermillion" href="#">Trending</a>
+          <a class="hover:text-light--vermillion" href="#">Categories</a>
         </ul>
       </nav>
     </header>
@@ -69,11 +71,21 @@
     <main class="py-10">
       <div class="md:grid grid-cols-[2fr_1fr] gap-7">
         <section>
-          <img src="/assets/images/image-web-3-desktop.jpg" alt="" />
+          <picture>
+            <source
+              media="(min-width: 650px)"
+              srcset="/assets/images/image-web-3-desktop.jpg"
+            />
+            <img
+              src="/assets/images/image-web-3-mobile.jpg"
+              style="width: auto"
+              alt="alt"
+            />
+          </picture>
 
           <div class="flex flex-col sm:flex-row gap-4 sm:mt-7">
             <h1
-              class="mt-6 text-heading-l sm:text-heading-x-l font-extrabold leading-10 sm:leading-[56px]"
+              class="mt-6 sm:mt-0 text-heading-l sm:text-heading-x-l font-extrabold leading-10 sm:leading-[56px]"
             >
               The Bright Future of Web 3.0?
             </h1>
@@ -85,21 +97,24 @@
               </p>
 
               <button
-                class="text-[14px] font-bold tracking-widest uppercase bg-light--vermillion text-almost-white w-[185px] py-3"
+                class="text-[14px] hover:bg-dark-space-blue font-bold tracking-widest uppercase bg-light--vermillion text-almost-white w-[185px] py-3"
               >
                 Read more
               </button>
             </div>
           </div>
         </section>
-        <section class="bg-dark-space-blue py-6 px-5 mt-16 sm:mt-0">
+        <section class="bg-dark-space-blue py-6 px-5 mt-16 md:mt-0">
           <h2 class="text-yellow text-heading-m font-bold leading-8">New</h2>
 
           <div class="text-almost-white gap-[30px] flex flex-col mt-8">
             <article class="flex flex-col gap-1">
-              <h3 class="text-heading-s font-extrabold leading-6">
+              <a
+                href="#"
+                class="text-heading-s hover:text-yellow font-extrabold leading-6"
+              >
                 Hydrogen VS Electric Cars
-              </h3>
+              </a>
               <p class="text-[15px] leading-[26px] font-normal text-silver">
                 Will hydrogen-fueled cars ever catch up to EVs?
               </p>
@@ -108,9 +123,12 @@
             <div class="w-full bg-divider-color h-[1px]"></div>
 
             <article class="flex flex-col gap-1">
-              <h3 class="text-heading-s font-extrabold leading-6">
+              <a
+                href="#"
+                class="hover:text-yellow text-heading-s font-extrabold leading-6"
+              >
                 The Downsides of AI Artistry
-              </h3>
+              </a>
               <p class="text-[15px] leading-[26px] font-normal text-silver">
                 What are the possible adverse effects of on-demand AI image
                 generation?
@@ -120,9 +138,12 @@
             <div class="w-full bg-divider-color h-[1px]"></div>
 
             <article class="flex flex-col gap-1">
-              <h3 class="text-heading-s font-extrabold leading-6">
+              <a
+                href="#"
+                class="hover:text-yellow text-heading-s font-extrabold leading-6"
+              >
                 Is VC Funding Drying Up?
-              </h3>
+              </a>
               <p class="text-[15px] leading-[26px] font-normal text-silver">
                 Private funding by VC firms is down 50% YOY. We take a look at
                 what that means.
@@ -131,8 +152,8 @@
           </div>
         </section>
       </div>
-      <section class="mt-16 flex flex-col gap-8 md:flex-row">
-        <article class="flex gap-8">
+      <section class="mt-16 grid md:grid-cols-3 gap-8">
+        <article class="flex gap-5">
           <img
             class="h-[130px]"
             src="/assets/images/image-retro-pcs.jpg"
@@ -142,18 +163,19 @@
             <span class="text-heading-m font-bold leading-8 text-silver"
               >01</span
             >
-            <h4
-              class="mt-auto text-heading-xs font-extrabold text-lg leading-6"
+            <a
+              href="#"
+              class="hover:text-light--vermillion text-heading-xs font-extrabold text-lg leading-6"
             >
               Reviving Retro PCs
-            </h4>
+            </a>
             <p class="text-[15px] leading-[26px] font-normal text-gunmetal">
               What happens when old PCs are given modern upgrades?
             </p>
           </div>
         </article>
 
-        <article class="flex gap-8">
+        <article class="flex gap-5">
           <img
             class="h-[130px]"
             src="/assets/images/image-top-laptops.jpg"
@@ -163,30 +185,34 @@
             <span class="text-heading-m font-bold leading-8 text-silver"
               >02</span
             >
-            <h4
-              class="mt-auto text-heading-xs font-extrabold text-lg leading-6"
+            <a
+              href="#"
+              class="hover:text-light--vermillion text-heading-xs font-extrabold text-lg leading-6"
             >
               Top 10 Laptops of 2022
-            </h4>
+            </a>
             <p class="text-[15px] leading-[26px] font-normal text-gunmetal">
               Our best picks for various needs and budgets.
             </p>
           </div>
         </article>
 
-        <article class="flex gap-8">
+        <article class="flex gap-5">
           <img
             class="h-[130px]"
             src="/assets/images/image-gaming-growth.jpg"
             alt=""
           />
           <div class="flex flex-col gap-3">
-            <span class="mt-auto text-heading-m font-bold leading-8 text-silver"
+            <span class="text-heading-m font-bold leading-8 text-silver"
               >03</span
             >
-            <h4 class="text-heading-xs font-extrabold text-lg leading-6">
+            <a
+              href="#"
+              class="hover:text-light--vermillion text-heading-xs font-extrabold text-lg leading-6"
+            >
               The Growth of Gaming
-            </h4>
+            </a>
             <p class="text-[15px] leading-[26px] font-normal text-gunmetal">
               How the pandemic has sparked fresh opportunities.
             </p>
